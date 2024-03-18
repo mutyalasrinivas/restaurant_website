@@ -1,0 +1,15 @@
+
+.summary-box{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    background-color:grey;
+    border:2px solid lightskyblue;
+    width:40%;
+    color: white;
+    
+    text-align: center;
+     margin-top: 40px;
+    padding:10px;
+ }

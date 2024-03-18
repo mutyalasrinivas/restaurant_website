@@ -15,8 +15,7 @@ const Header=()=>{
     <a href='/'><img style={{width:"40px",height:'40px'}}
     src='https://cdn-icons-png.flaticon.com/512/3237/3237472.png' 
     alt='user-pic'/> </a> 
-    {/* <button className="header__button">Sign In</button> */}
-    </div>
+     </div>
     </div>
  )
 }
