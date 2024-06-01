@@ -1,11 +1,17 @@
 import React from "react";
+import MealItemForm from "./MealItemForm";
 
 const Meal=({title,description,price})=>{
-   return  <div style={{padding:'10px',textAlign:'center', border:'2px'}}>
+   return <div style={{ display:"flex",flexWrap:"wrap",justifyContent:"space-between",alignItems:"baseline",backgroundColor:'#E0B0FF',margin:"20px",width:"50%"}}>
+     <div>
         <h2>{title}</h2>
         <h5>{description}</h5>
         <h2>{price}</h2>
-    </div>
+     </div>
+     <div style={{width:"20%"}}>
+        <MealItemForm/>
+     </div>
+    </div> 
 }
 
 export default Meal;
