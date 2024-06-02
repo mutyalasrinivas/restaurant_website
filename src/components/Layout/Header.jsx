@@ -5,7 +5,7 @@ import Cart from '../Cart/Cart';
  
 
 const Header=()=>{
-  const [isModalOpen,setIsModalOpen]=useState();
+  const [isModalOpen,setIsModalOpen]=useState(false);
   const openModal=()=>setIsModalOpen(true)
   const closeModal=()=>setIsModalOpen(false)
  return(
@@ -23,7 +23,7 @@ const Header=()=>{
      </div>
      {isModalOpen&&
      <ModalCart onClose={closeModal}>
-      <Cart/>
+      <Cart onClose={closeModal}/>
      </ModalCart>
      }
     </div>

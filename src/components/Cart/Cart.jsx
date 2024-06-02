@@ -1,4 +1,4 @@
-const Cart=()=>{
+const Cart=({onClose})=>{
     const cartItems=[{id:'c1',name:"srini",amount:9,price:18.27}].map((item)=><li>{item.name}</li>)
   return(
     <div>
@@ -8,7 +8,7 @@ const Cart=()=>{
             <span>27.99</span>
          </div>
          <div>
-           <button>Cancel</button>
+           <button onClick={onClose}>Cancel</button>
            <button>Order</button>
          </div>
     </div>
