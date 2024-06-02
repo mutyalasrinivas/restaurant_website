@@ -8,7 +8,7 @@ const Meal=({title,description,price})=>{
         <h5>{description}</h5>
         <h2>{price}</h2>
      </div>
-     <div style={{width:"20%"}}>
+     <div >
         <MealItemForm/>
      </div>
     </div> 

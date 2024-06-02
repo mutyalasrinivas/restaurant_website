@@ -1,21 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HeaderStyles.css';
+import ModalCart from '../UI/ModalCart';
+import Cart from '../Cart/Cart';
  
 
 const Header=()=>{
+  const [isModalOpen,setIsModalOpen]=useState();
+  const openModal=()=>setIsModalOpen(true)
+  const closeModal=()=>setIsModalOpen(false)
  return(
     <div className='header'>
     <div className='header_left'>
       <h1 className='header_title'>Venkateswara Foods</h1>
     </div>
     <div className='header_right'>
-    <a href='/'><img style={{width:"40px",height:'40px'}}
+    <a href='#' onClick={openModal}><img style={{width:"40px",height:'40px'}}
     src='https://cdn.pixabay.com/photo/2015/12/23/01/14/edit-1105049_1280.png' 
     alt='cart-pic'/> </a>
     <a href='/'><img style={{width:"40px",height:'40px'}}
     src='https://cdn-icons-png.flaticon.com/512/3237/3237472.png' 
     alt='user-pic'/> </a> 
      </div>
+     {isModalOpen&&
+     <ModalCart onClose={closeModal}>
+      <Cart/>
+     </ModalCart>
+     }
     </div>
  )
 }
