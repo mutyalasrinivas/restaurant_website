@@ -19,6 +19,7 @@ const Cart=({onClose})=>{
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWC7V4IwtWtU9_UFg6_MJ1lmAwJpU-MksCtA&s"
                style={{width:"20px",height:"20px",alignItems:"baseline", marginRight:"0px"}} alt="minimize" 
                onClick={()=>reduceHandler(item.id)}/>
+               <img src="https://toppng.com/uploads/preview/recycling-bin-vector-delete-icon-png-black-11563002079w1isxqyyiv.png"  style={{width:"20px",height:"20px",alignItems:"baseline", marginRight:"0px"}} alt="delete-item" onClick={()=>removeHandler(item.id)}/>
             </li>
           ))}
          </ul>

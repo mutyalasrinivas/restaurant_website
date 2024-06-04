@@ -17,7 +17,7 @@ const removeItemHandler=(id)=>{
           const updatedItems = prevItems.filter(item => item.id !== id);
           const itemToRemove = prevItems.find(item => item.id === id);
           console.log(itemToRemove)
-          setTotalAmount((prevTotal) => prevTotal - itemToRemove.price * itemToRemove.quantity);
+          setTotalAmount((prevTotal) => totalAmount - itemToRemove.price * itemToRemove.quantity);
           return updatedItems;
         });
      
