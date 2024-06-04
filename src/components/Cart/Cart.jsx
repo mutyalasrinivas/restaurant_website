@@ -13,7 +13,7 @@ const Cart=({onClose})=>{
   return(
     <div>
          <ul>
-          {items.map(item=>(
+          {items.map((item)=>(
             <li key={item.id}>
               {item.title} * {item.quantity} - Rs{item.price.toFixed(2)}-
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWC7V4IwtWtU9_UFg6_MJ1lmAwJpU-MksCtA&s"

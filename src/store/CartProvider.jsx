@@ -23,17 +23,28 @@ const removeItemHandler=(id)=>{
      
 }
 
+ 
 const decreaseQuantityHandler = (id) => {
     setCartItem((prevItems) => {
-        return prevItems.map(item => {
-            if (item.id === id && item.quantity > 1) {
-                return { ...item, quantity: item.quantity - 1 };
-            }
-            setTotalAmount((prevTotal) => prevTotal - item.price);  
-            return item;
-        });
-    });
- };
+      return prevItems.map((item) => {
+        // Check if item ID matches and quantity is greater than 1
+        if (item.id === id && item.quantity > 1) {
+          // Decrement quantity and create a new item object
+          const updatedItem = { ...item, quantity: item.quantity - 1};
+          setTotalAmount((prevTotal) => {
+            // Calculate the new total amount based on updated items
+            return totalAmount-item.price*(item.quantity-1);
+             
+          });
+          // Return the updated item
+          return updatedItem;
+        } else {
+          // If ID doesn't match or quantity is 1, return the original item
+          return item;
+        }
+      });
+    });   
+  };
 
     const cartContext={
         items:cartItem,
